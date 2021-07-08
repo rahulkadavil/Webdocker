@@ -18,22 +18,16 @@ ENV DEBIAN_FRONTEND="noninteractive" \
 # See https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 RUN apt update -y && apt install -y  --no-install-recommends \
     build-essential \
-    locales \
-    sqlite3 \
-    fontconfig-config \
-    libjpeg-turbo8 \
-    libxrender1 \
-    libfontconfig1 \
-    libxext6 \
-    fontconfig \
-    xfonts-75dpi \
-    xfonts-base \
     python3.9 \
     python3-dev \
     python3-pip \
     wget \
-    android-tools-adb
-RUN add-apt-repository ppa:longsleep/golang-backports && apt update \ && apt install golang-go
+    git \
+    android-tools-adb \
+    software-properties-common
+
+RUN add-apt-repository ppa:longsleep/golang-backports && apt update -y && apt install -y \
+    golang-go
 
 
 RUN apt-get install -y nginx php7.0-fpm supervisor && \
