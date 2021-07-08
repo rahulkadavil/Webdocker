@@ -29,5 +29,6 @@ RUN go get -u github.com/tomnomnom/httprobe
 RUN go get -v github.com/projectdiscovery/httpx/cmd/httpx 
 RUN go get -v github.com/OWASP/Amass/v3/ 
 RUN go get -u -v github.com/lc/gau
+RUN go get -u github.com/ffuf/ffuf
 
 RUN echo "export PATH=$PATH:/root/go/bin" >> ~/.bashrc
