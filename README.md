@@ -8,4 +8,8 @@ Ubuntu Docker image containing some of the tools for Web application pentesting 
 3. httpx by pdiscovery.io
 4. gau by Corben Leo
 5. aquatone by michenriksen 
+6. Fuff
+7. Seclist
+
+
 
