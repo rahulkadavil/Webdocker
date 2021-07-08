@@ -29,6 +29,3 @@ RUN apt update -y && apt install -y  --no-install-recommends \
 RUN add-apt-repository ppa:longsleep/golang-backports && apt update -y && apt install -y \
     golang-go
 
-
-RUN apt-get install -y nginx php7.0-fpm supervisor && \
-    rm -rf /var/lib/apt/lists/*
