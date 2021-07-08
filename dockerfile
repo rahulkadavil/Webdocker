@@ -18,14 +18,16 @@ ENV DEBIAN_FRONTEND="noninteractive" \
 # See https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run
 RUN apt update -y && apt install -y  --no-install-recommends \
     build-essential \
-    python3.9 \
-    python3-dev \
-    python3-pip \
     wget \
-    git \
-    android-tools-adb \
     software-properties-common
 
 RUN add-apt-repository ppa:longsleep/golang-backports && apt update -y && apt install -y \
     golang-go
 
+RUN go get -u github.com/tomnomnom/assetfinder 
+RUN go get -u github.com/tomnomnom/httprobe
+RUN go get -v github.com/projectdiscovery/httpx/cmd/httpx 
+RUN go get -v github.com/OWASP/Amass/v3/ 
+RUN go get -u -v github.com/lc/gau
+
+RUN echo "export PATH=$PATH:/root/go/bin" >> ~/.bashrc
