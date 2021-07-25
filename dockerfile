@@ -30,5 +30,8 @@ RUN go get -v github.com/projectdiscovery/httpx/cmd/httpx
 RUN go get -v github.com/OWASP/Amass/v3/ 
 RUN go get -u -v github.com/lc/gau
 RUN go get -u github.com/ffuf/ffuf
+RUN go get -u github.com/tomnomnom/waybackurls
+RUN go get -u github.com/tomnomnom/meg
+RUN go get -u github.com/michenriksen/aquatone
 
 RUN echo "export PATH=$PATH:/root/go/bin" >> ~/.bashrc
