@@ -12,6 +12,8 @@ Ubuntu Docker image containing some of the tools for Web application pentesting 
 6. Waybackurl
 7. Aquatone
 8. meg
+9. Nmap
+10. Unfurl
 
 
 
