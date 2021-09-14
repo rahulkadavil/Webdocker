@@ -20,9 +20,12 @@ RUN apt update -y && apt install -y  --no-install-recommends \
     build-essential \
     wget \
     software-properties-common
+    
 
 RUN add-apt-repository ppa:longsleep/golang-backports && apt update -y && apt install -y \
     golang-go
+
+RUN apt-get install -y nmap
 
 RUN go get -u github.com/tomnomnom/assetfinder 
 RUN go get -u github.com/tomnomnom/httprobe
@@ -33,5 +36,6 @@ RUN go get -u github.com/ffuf/ffuf
 RUN go get -u github.com/tomnomnom/waybackurls
 RUN go get -u github.com/tomnomnom/meg
 RUN go get -u github.com/michenriksen/aquatone
+RUN go get -u github.com/tomnomnom/unfurl 
 
 RUN echo "export PATH=$PATH:/root/go/bin" >> ~/.bashrc
