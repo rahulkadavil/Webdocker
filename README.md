@@ -18,4 +18,4 @@ Ubuntu Docker image containing some of the tools for Web application pentesting 
 
 
 
-##### devleoped during learning about docker :D 
+##### devleoped during learning about docker 😄
