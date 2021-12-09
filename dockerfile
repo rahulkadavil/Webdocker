@@ -21,11 +21,13 @@ RUN apt update -y && apt install -y  --no-install-recommends \
     wget \
     software-properties-common
     
+    
 
 RUN add-apt-repository ppa:longsleep/golang-backports && apt update -y && apt install -y \
     golang-go
 
 RUN apt-get install -y nmap
+RUN apt-get install -y ruby-full
 
 RUN go get -u github.com/tomnomnom/assetfinder 
 RUN go get -u github.com/tomnomnom/httprobe
