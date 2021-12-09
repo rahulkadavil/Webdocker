@@ -37,5 +37,9 @@ RUN go get -u github.com/tomnomnom/waybackurls
 RUN go get -u github.com/tomnomnom/meg
 RUN go get -u github.com/michenriksen/aquatone
 RUN go get -u github.com/tomnomnom/unfurl 
-
 RUN echo "export PATH=$PATH:/root/go/bin" >> ~/.bashrc
+
+#install wpscan
+git clone https://github.com/wpscanteam/wpscan.git
+cd wpscan
+sudo gem install bundler && bundle install
